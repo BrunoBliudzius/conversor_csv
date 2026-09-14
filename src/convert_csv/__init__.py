@@ -2,7 +2,11 @@ from src.convert_csv.api.routes.post import router as search_csv_router
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI
 
-app = FastAPI()
+app = FastAPI(
+    docs_url=None,
+    redoc_url=None,
+    openapi_url=None,
+)
 
 app.add_middleware(
     CORSMiddleware,
