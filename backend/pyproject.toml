@@ -12,10 +12,7 @@ dependencies = [
 ]
 
 [tool.fastapi]
-entrypoint = "src.convert_csv.__init__:app"
-
-[project.scripts]
-convert-csv = "convert_csv:main"
+entrypoint = "src.convert_csv:app"
 
 [build-system]
 requires = ["uv_build>=0.12.10,<0.13.0"]
