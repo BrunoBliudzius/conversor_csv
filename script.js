@@ -23,15 +23,18 @@ btn_submit.addEventListener("click", async (event) => {
       try {
         const ocorrencias = resultado.data;
 
-        const resposta = await fetch("http://127.0.0.1:8000/convert/", {
-          method: "POST",
+        const resposta = await fetch(
+          "https://conversor-csv.onrender.com/convert/",
+          {
+            method: "POST",
 
-          headers: {
-            "Content-Type": "application/json",
+            headers: {
+              "Content-Type": "application/json",
+            },
+
+            body: JSON.stringify(ocorrencias),
           },
-
-          body: JSON.stringify(ocorrencias),
-        });
+        );
 
         if (!resposta.ok) {
           throw new Error(`HTTP error! status: ${resposta.status}`);
