@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="script.js" defer></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.5.3/papaparse.min.js"></script>
+
+    <title>Conversor</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico">   
+  </head>
+
+  <body>
+    <div class="container mt-3">
+      <h1 class="mb-4">Conversor de CSV</h1>
+
+      <div class="mb-3">
+        <label for="csvFile" class="form-label fw-semibold">
+          Selecione um arquivo CSV
+        </label>
+        <input type="file" class="form-control" id="csvFile" accept=".csv" />
+      </div>
+      <div class="d-flex align-items-end justify-content-between gap-3 mb-3">
+        <div>
+          <button type="submit" class="btn btn-primary px-4" id="btn_submit">
+            Converter
+          </button>
+        </div>
+        <div>
+          <label for="valor_total" class="form-label fw-semibold mb-1">
+            Valor total
+          </label>
+          <div class="input-group">
+            <span class="input-group-text">R$</span>
+            <input
+              type="text"
+              class="form-control text-end fw-semibold"
+              id="valor_total"
+              value="0,00"
+              readonly
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title mb-3">Dados</h5>
+        <div class="table-responsive">
+          <table
+            id="tabela"
+            class="table table-striped table-hover table-bordered align-middle"
+          >
+            <thead class="table-dark">
+              <tr>
+                <th>Prestador</th>
+                <th>Data</th>
+                <th>UF</th>
+                <th>Serviço</th>
+                <th>Resultado</th>
+                <th>Rastreado</th>
+                <th>Houve Guincho</th>
+                <th>Tipo Veículo</th>
+                <th>Placa</th>
+                <th>Chassi</th>
+                <th>Qtd Agente</th>
+                <th>Horas Extra</th>
+                <th>Valor Guincho</th>
+                <th>Valor Informado</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
