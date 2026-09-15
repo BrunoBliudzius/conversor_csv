@@ -15,7 +15,7 @@ btn_submit.addEventListener("click", async (event) => {
   formData.append("file", file);
 
   try {
-    const condicao = "local";
+    const condicao = "producao";
     let url = "";
 
     if (condicao == "local") {
@@ -42,7 +42,7 @@ function MontarTabela(res) {
   const valor_total = document.querySelector("#valor_total");
 
   let total = 0;
-  
+
   tbody.innerHTML = "";
 
   res.forEach((ocorrencia) => {
